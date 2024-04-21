@@ -1,0 +1,513 @@
+<mat-accordion class="example-headers-align">
+  <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        What is Angular?
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+      Imporatant
+    </mat-panel-description>
+    <br/>
+    <div>  
+    Angular is a powerful open-source web development framework maintained by Google. It's used for building dynamic and interactive web applications with HTML, CSS, and TypeScript. Angular simplifies development through its component-based architecture, two-way data binding, dependency injection, routing, forms handling, and HTTP client.
+    </div>
+    <mat-action-row>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        What is TypeScript? Why is it used in Angular?
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div>
+      TypeScript is a typed superset of JavaScript created by Microsoft that adds optional types, classes, async/await, and many other features,
+      and compiles to plain JavaScript. Angular built entirely in TypeScript and used as a primary language. You can install it globally as      
+      <br/>
+      TypeScript is used in Angular because it provides better tooling support, improved type checking, and additional features like decorators, interfaces, etc.
+    </div>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        What is Data-binding in Angular?
+      </mat-panel-title>
+      
+    </mat-expansion-panel-header>
+      <mat-panel-description>
+        Imporatant
+      </mat-panel-description>
+     <div>
+      Data binding in Angular refers to the synchronization of data between the components of an application and the HTML elements in the user interface. There are mainly four types of data binding supported by Angular:      
+      <dl>
+        <dt [innerHTML]="'1. Interpolation {{ }} == Define with Curly Barces'"></dt>
+        <dd [innerHTML]="'Hello, {{ name }} '"></dd>
+        <hr>
+        <dt [innerHTML]="'2. Property binding ([ ])  == Binding the Property'"></dt>
+        <dd> &lt;img [src]="imageUrl"&gt;</dd>
+        <hr>
+        <dt>3. Event Binding == Binding the Event</dt>
+        <dd [innerHTML]="'(click)=onClick()'"></dd>
+        <hr>
+        <dt>4. Two-Way Binding</dt>
+        <dd>Two-way binding allows you to both display and update a component property from within a template. It combines property binding and event binding using the ngModel directive, typically used with form elements.Example:</dd>
+        <dd [innerHTML]="'[(ngModel)]=name'"></dd>
+      </dl>
+    </div>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">End</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        What is the difference between AngularJS and Angular?
+      </mat-panel-title>
+      
+    </mat-expansion-panel-header>
+      <mat-panel-description>
+        Imporatant
+      </mat-panel-description>
+     <div>
+      Angular is a completely revived component-based framework in which an application is a tree of individual components. Some of the major difference in tabular form
+      <table >
+        <tr>
+          <th>Angular</th>
+          <th>AngularJS</th>
+        </tr>
+        <tr>
+          <td>This is based on Service/Controller</td>
+          <td>It is based on MVC architecture </td>
+        </tr>
+        <tr>
+          <td>Introduced the TypeScript to write the application</td>
+          <td>It uses JavaScript to build the application </td>
+        </tr>
+        <tr>
+          <td>This is a component based UI approach</td>
+          <td>Based on controllers concept </td>
+        </tr>
+        <tr>
+          <td>Developed considering mobile platform</td>
+          <td>Not a mobile friendly framework  </td>
+        </tr>
+        <tr>
+          <td>Ease to create SEO friendly applications          </td>
+          <td>Difficulty in SEO friendly application development </td>
+        </tr>
+     </table>
+
+    </div>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">End</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 4" (opened)="setStep(4)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        What are the key components of Angular?
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div>
+      <ul>
+        <li>
+          <strong>Component:</strong> These are the basic building blocks of Angular applications to control HTML views.
+        </li>
+        <li>
+          <strong>Modules:</strong> An Angular module is a set of Angular basic building blocks like components, directives, services, etc. An application is divided into logical pieces, and each piece of code is called a "module" which performs a single task.
+        </li>
+        <li>
+          <strong>Templates:</strong> This represents the views of an Angular application.
+        </li>
+        <li>
+          <strong>Services:</strong> It is used to create components which can be shared across the entire application.
+        </li>
+        <li>
+          <strong>Metadata:</strong> This can be used to add more data to an Angular class.
+        </li>
+      </ul>
+    </div>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 5" (opened)="setStep(5)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        What are directives?
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div>
+      Directives add behaviour to an existing DOM element or an existing component instance.
+      <br>
+      <img src="../../assets/Images/Directive.png" alt="Directive.png"  />
+     <br/>
+      Now this directive extends HTML element behavior with a yellow background as below
+      <br>
+      <img src="../../assets/Images/DirectiveExam.png" alt="Directive"/>
+    </div>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 6" (opened)="setStep(6)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        What is a module?
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div>
+      Modules are logical boundaries in your application and the application is divided into separate modules to separate the functionality of
+      your application. Lets take an example of app.module.ts root module declared with &#64;ngModule decorator as below,      
+      
+      <ul>
+        <li>
+          <strong>imports:</strong> The <code>imports</code> option is used to import other dependent modules. The <code>BrowserModule</code> is required by default for any web-based Angular application.
+        </li>
+        <li>
+          <strong>declarations:</strong> The <code>declarations</code> option is used to define components in the respective module.
+        </li>
+        <li>
+          <strong>bootstrap:</strong> The <code>bootstrap</code> option tells Angular which Component to bootstrap in the application.
+        </li>
+        <li>
+          <strong>providers:</strong> The <code>providers</code> option is used to configure a set of injectable objects that are available in the injector of this module.
+        </li>
+        <li>
+          <strong>entryComponents:</strong> The <code>entryComponents</code> option is a set of components dynamically loaded into the view.
+        </li>
+      </ul>
+    </div>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 7" (opened)="setStep(7)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        What are lifecycle hooks available?
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+      Imporatant
+    </mat-panel-description>
+    <div>
+      <ul>
+        <li>
+          <strong>ngOnChanges:</strong> Called every time the input properties of a component or directive are changed.
+        </li>
+        <li>
+          <strong>ngOnInit:</strong> Called once, after the first ngOnChanges.
+        </li>
+        <li>
+          <strong>ngDoCheck:</strong> Called during every change detection run, immediately after ngOnChanges and ngOnInit.
+        </li>
+        <li>
+          <strong>ngAfterContentInit:</strong> Called after ngOnInit when Angular has finished initializing the component's content.
+        </li>
+        <li>
+          <strong>ngAfterContentChecked:</strong> Called after ngAfterContentInit and every subsequent ngDoCheck.
+        </li>
+        <li>
+          <strong>ngAfterViewInit:</strong> Called after ngAfterContentChecked when Angular has finished initializing the component's views.
+        </li>
+        <li>
+          <strong>ngAfterViewChecked:</strong> Called after ngAfterViewInit and every subsequent ngAfterContentChecked.
+        </li>
+        <li>
+          <strong>ngOnDestroy:</strong> Called just before Angular destroys the directive/component.
+        </li>
+      </ul>      
+    </div>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel><mat-expansion-panel [expanded]="step === 8" (opened)="setStep(8)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        What is metadata?
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div>
+      Metadata in Angular refers to additional information provided via decorators like Component, &#64;Directive, &#64;Pipe, and &#64;NgModule. This information helps Angular understand how to instantiate, configure, and use classes within an application, such as components, directives, pipes, and modules. It includes details like selectors, templates, styles, dependencies, and more.
+      <br>
+      Metadata store the class information.
+    </div>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 9" (opened)="setStep(9)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        What is dependency injection in Angular?
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div>
+      Dependency injection (DI), is an important application design pattern in which a class asks for dependencies from external sources rather
+      than creating them itself. Angular comes with its own dependency injection framework for resolving dependencies( services or objects that
+      a class needs to perform its function).So you can have your services depend on other services throughout your application.      
+    </div>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 10" (opened)="setStep(10)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        What is the purpose of async pipe?
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+      Imporatant
+    </mat-panel-description>
+    <div>
+      The AsyncPipe subscribes to an observable or promise and returns the latest value it has emitted. When a new value is emitted, the pipe
+      marks the component to be checked for changes. Let's take a time observable which continuously updates the view for every 2 seconds with the current time.
+      <br>
+      <img src="../../assets/Images/asyncPipe.png" alt="AsyncPipe" /> 
+    </div>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 11" (opened)="setStep(11)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        What are pipes?
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+      Imporatant
+    </mat-panel-description>
+    <div>
+      A pipe takes in data as input and transforms it to a desired output. For example, let us take a pipe to transform a component's birthday property into a human-friendly date using date pipe.
+
+      <br>
+      <img src="../../assets/Images/pipe.png" alt="AsyncPipe" /> 
+    </div>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 12" (opened)="setStep(12)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        What is a parameterized pipe?
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+      Imporatant
+    </mat-panel-description>
+    <div>
+      A pipe can accept any number of optional parameters to fine-tune its output. The parameterized pipe can be created by declaring the pipe
+      name with a colon ( : ) and then the parameter value. If the pipe accepts multiple parameters, separate the values with colons. Let's take a
+      birthday example with a particular format(dd/MM/yyyy):
+      <br>
+      <img src="../../assets/Images/ParameterPipe.png" alt="ParameterPipe" /> 
+    </div>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 13" (opened)="setStep(13)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        What is the difference between pure and impure pipe?
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+      Imporatant
+    </mat-panel-description>
+    <div>
+      A pure pipe is only called when Angular detects a change in the value or the parameters passed to a pipe. For example, any changes to a
+      primitive input value (String, Number, Boolean, Symbol) or a changed object reference (Date, Array, Function, Object). 
+      <hr>
+      An impure pipe is
+      called for every change detection cycle no matter whether the value or parameters changes. i.e, An impure pipe is called often, as often as
+      every keystroke or mouse-move.      
+    </div>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 14" (opened)="setStep(14)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        What is a custom pipe?
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+      Imporatant
+    </mat-panel-description>
+    <div>
+      A custom pipe in Angular is a reusable function that transforms data in templates. It allows you to format, filter, or otherwise manipulate data before displaying it in the user interface. Custom pipes are created using the PipeTransform interface and can be applied to data using the pipe symbol (|) in Angular templates.     
+    </div>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 15" (opened)="setStep(15)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        What is a bootstrapping module?
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+      Imporatant
+    </mat-panel-description>
+    <div>
+      Every application has at least one Angular module, the root module that you bootstrap to launch the application is called as bootstrapping
+      module. It is commonly known as AppModule. T
+      <br>
+      Example : bootstrap: [AppComponent]
+    </div>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 16" (opened)="setStep(16)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        What are observables?
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+      Imporatant
+    </mat-panel-description>
+    <div>
+      Observables are declarative which provide support for passing messages between publishers and subscribers in your application. They are
+      mainly used for event handling, asynchronous programming, and handling multiple values. In this case, you define a function for
+      publishing values, but it is not executed until a consumer subscribes to it. The subscribed consumer then receives notifications until the
+      function completes, or until they unsubscribe.
+    </div>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 16" (opened)="setStep(16)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        What is RxJS?
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+      Imporatant
+    </mat-panel-description>
+    <div>
+      RxJS is a library for composing asynchronous and callback-based code in a functional, reactive style using Observables. Many APIs such as
+HttpClient produce and consume RxJS Observables and also uses operators for processing observables.
+    </div>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  
+  <mat-expansion-panel [expanded]="step === 17" (opened)="setStep(17)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        What are the various kinds of directives?
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+      Imporatant
+    </mat-panel-description>
+    <div>
+      <ol>
+        <li>
+          <strong>Components:</strong> These are directives with a template.
+        </li>
+        <li>
+          <strong>Structural directives:</strong> These directives change the DOM layout by adding and removing DOM elements. *ngFor, *ngIf, *ngSwitch
+        </li>
+        <li>
+          <strong>Attribute directives:</strong> These directives change the appearance or behavior of an element, component, or another directive. *ngStyle, *ngClass
+        </li>
+      </ol>
+    </div>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 18" (opened)="setStep(18)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        What is Angular Router?
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+      Imporatant
+    </mat-panel-description>
+    <div>
+      Angular Router is a mechanism in which navigation happens from one view to the next as users perform application tasks. It borrows the
+      concepts or model of browser's application navigation.      
+    </div>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 19" (opened)="setStep(19)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        What is zone?
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+      Imporatant
+    </mat-panel-description>
+    <div>
+      A Zone is an execution context that persists across async tasks. Angular relies on zone.js to run Angular's change detection processes when
+      native JavaScript operations raise events     
+    </div>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+
+
+</mat-accordion>
